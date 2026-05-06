@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960" role="img" aria-labelledby="title desc">
+  <title id="title">Náhled úvodní obrazovky aplikace O.R.I.O.N.</title>
+  <desc id="desc">Tmavé policejní databázové rozhraní s aktivním stavem systému, informacemi o případu a YouTube video blokem.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#05090d"/>
+      <stop offset="0.55" stop-color="#07141b"/>
+      <stop offset="1" stop-color="#0d1515"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="20%" cy="0%" r="60%">
+      <stop offset="0" stop-color="#1f8ba9" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#1f8ba9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#091923" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#050a0e" stop-opacity="0.96"/>
+    </linearGradient>
+    <linearGradient id="button" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1bea82"/>
+      <stop offset="1" stop-color="#45caff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="26" stdDeviation="28" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <filter id="greenGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M 34 0 L 0 0 0 34" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1440" height="960" fill="url(#bg)"/>
+  <rect width="1440" height="960" fill="url(#glow)"/>
+  <rect width="1440" height="960" fill="url(#grid)"/>
+
+  <rect x="32" y="28" width="1376" height="72" rx="18" fill="#050f16" fill-opacity="0.86" stroke="#5ce2ff" stroke-opacity="0.25"/>
+  <text x="58" y="73" fill="#8be9ff" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="5">O.R.I.O.N.</text>
+  <text x="250" y="72" fill="#8fa9b3" font-family="Arial, sans-serif" font-size="18">Interní vyšetřovací systém</text>
+  <circle cx="1194" cy="64" r="8" fill="#23f57a" filter="url(#greenGlow)"/>
+  <text x="1215" y="70" fill="#72ffac" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">SYSTÉM AKTIVNÍ</text>
+
+  <rect x="130" y="128" width="1180" height="6" rx="3" fill="#ffffff" fill-opacity="0.07"/>
+  <rect x="130" y="128" width="24" height="6" rx="3" fill="url(#button)"/>
+
+  <text x="130" y="178" fill="#78929c" font-family="Arial, sans-serif" font-size="14" letter-spacing="3">PŘÍPAD 2254578/2026</text>
+  <text x="1198" y="178" fill="#78929c" font-family="Arial, sans-serif" font-size="14" letter-spacing="3">SLIDE 1 / 50</text>
+
+  <rect x="130" y="202" width="1180" height="640" rx="26" fill="url(#card)" stroke="#5ce2ff" stroke-opacity="0.22" filter="url(#shadow)"/>
+  <path d="M130 202 H1310" stroke="#8be9ff" stroke-opacity="0.08"/>
+  <path d="M188 782 H566" stroke="#24f08b" stroke-opacity="0.24"/>
+
+  <text x="188" y="292" fill="#69eaff" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="4">INTERNÍ SYSTÉM O.R.I.O.N.</text>
+  <text x="188" y="368" fill="#f0fbff" font-family="Arial, sans-serif" font-size="62" font-weight="800" letter-spacing="-3">Operativní</text>
+  <text x="188" y="438" fill="#f0fbff" font-family="Arial, sans-serif" font-size="62" font-weight="800" letter-spacing="-3">Rozhraní</text>
+  <text x="188" y="508" fill="#f0fbff" font-family="Arial, sans-serif" font-size="62" font-weight="800" letter-spacing="-3">Interního Odboru</text>
+  <text x="188" y="578" fill="#f0fbff" font-family="Arial, sans-serif" font-size="62" font-weight="800" letter-spacing="-3">Nálezů</text>
+
+  <text x="188" y="636" fill="#abc5ce" font-family="Arial, sans-serif" font-size="20">Interní vyšetřovací systém s přístupem pouze pro autorizované vyšetřovatele.</text>
+  <text x="188" y="674" fill="#abc5ce" font-family="Arial, sans-serif" font-size="20">Režim: Detektiv</text>
+  <text x="188" y="712" fill="#abc5ce" font-family="Arial, sans-serif" font-size="20">Případ: 2254578/2026 (interní označení: ŠEPOTY STROMŮ)</text>
+  <text x="188" y="750" fill="#abc5ce" font-family="Arial, sans-serif" font-size="20">Stav: Čeká se na spuštění · Systém aktivní</text>
+
+  <rect x="188" y="786" width="288" height="56" rx="14" fill="url(#button)"/>
+  <text x="220" y="821" fill="#021016" font-family="Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="1.4">ZAHÁJIT VYŠETŘOVÁNÍ</text>
+
+  <rect x="786" y="274" width="452" height="338" rx="18" fill="#02070b" stroke="#8be9ff" stroke-opacity="0.24"/>
+  <rect x="786" y="274" width="452" height="42" rx="18" fill="#061018"/>
+  <path d="M786 316 H1238" stroke="#8be9ff" stroke-opacity="0.12"/>
+  <circle cx="812" cy="296" r="7" fill="#ff3650"/>
+  <text x="834" y="301" fill="#91abb4" font-family="Arial, sans-serif" font-size="13" letter-spacing="2">ÚVODNÍ VIDEO K PŘÍPADU</text>
+  <rect x="818" y="348" width="388" height="218" rx="10" fill="#0b1b24" stroke="#1f8ba9" stroke-opacity="0.35"/>
+  <polygon points="970,404 970,510 1062,457" fill="#45caff" opacity="0.88"/>
+  <text x="892" y="590" fill="#78929c" font-family="Arial, sans-serif" font-size="14" letter-spacing="2">YOUTUBE EMBED PLACEHOLDER</text>
+
+  <rect x="786" y="646" width="452" height="128" rx="18" fill="#041310" stroke="#22f57a" stroke-opacity="0.26"/>
+  <text x="816" y="690" fill="#6dffa7" font-family="Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="2">NÁPOVĚDY A AUDIO LINKA</text>
+  <circle cx="1186" cy="688" r="26" fill="#087238" stroke="#72ffac" stroke-opacity="0.55"/>
+  <text x="1174" y="697" fill="#001107" font-family="Arial, sans-serif" font-size="26" font-weight="800">☎</text>
+  <rect x="816" y="720" width="112" height="28" rx="14" fill="#72ffac" fill-opacity="0.11" stroke="#72ffac" stroke-opacity="0.25"/>
+  <text x="833" y="740" fill="#adffd0" font-family="Arial, sans-serif" font-size="12" font-weight="800">NÁPOVĚDA 1</text>
+  <rect x="944" y="720" width="112" height="28" rx="14" fill="#72ffac" fill-opacity="0.07" stroke="#72ffac" stroke-opacity="0.25"/>
+  <text x="961" y="740" fill="#adffd0" font-family="Arial, sans-serif" font-size="12" font-weight="800">NÁPOVĚDA 2</text>
+</svg>
