@@ -1,64 +1,70 @@
-# O.R.I.O.N. — detektivní webová hra
+# Escape Codex — mobilní PWA pro únikové hry
 
-Statická webová aplikace pro detektivní hru stylovaná jako moderní interní policejní databáze.
+Prototyp instalovatelné mobilní webové aplikace pro únikové hry. Obsahuje hráčské rozhraní, aktivaci kódem, ukládání průchodu hrou, nápovědy, body, žebříčky a administrační rozhraní pro tvorbu a testování her.
 
-## Náhled přímo na GitHubu
-
-Na GitHubu máš dvě rychlé možnosti:
-
-1. Otevři soubor `README.md` v repozitáři. GitHub v něm automaticky zobrazí obrázek níže jako náhled úvodní obrazovky.
-2. Pokud chceš otevřít jen samotný obrázek, klikni v seznamu souborů na `preview.svg`. GitHub SVG soubor vykreslí přímo v prohlížeči.
-
-![Náhled úvodní obrazovky aplikace O.R.I.O.N.](./preview.svg)
-
-## Lokální spuštění interaktivní aplikace
-
-Pokud chceš aplikaci opravdu proklikat, stáhni si repozitář a spusť:
+## Spuštění
 
 ```bash
 npm start
 ```
 
-Potom otevři v prohlížeči adresu:
+Poté otevři:
 
 ```text
 http://127.0.0.1:5173
 ```
 
-## Veřejný náhled přes GitHub Pages
+## Instalace do mobilu
 
-Chceš-li náhled sdílet přes odkaz bez lokálního spuštění, zapni GitHub Pages:
+Aplikace je připravena jako PWA (`manifest.webmanifest` + `sw.js`). Po nasazení na HTTPS ji lze v mobilním prohlížeči přidat na plochu a spouštět jako instalovatelnou aplikaci. Pro publikaci do App Store / Google Play je možné stejný frontend zabalit např. pomocí Capacitoru.
 
-1. Na GitHubu otevři repozitář.
-2. Jdi do `Settings` → `Pages`.
-3. V části `Build and deployment` nastav `Source` na `Deploy from a branch`.
-4. Vyber aktuální branch a složku `/ (root)`.
-5. Ulož nastavení a počkej, než GitHub vygeneruje veřejnou URL.
+## Demo účty
 
-Protože aplikace používá statické soubory `index.html`, `src/main.js` a `src/styles.css`, není potřeba žádný build krok pro GitHub Pages.
+- Hráč: `hrac@demo.cz` / `demo123`
+- Admin: `admin@escape.local` / `admin123`
+
+## Demo aktivační kódy
+
+- Kodex Ztraceného světa: `KODX-2026-PRAH`
+- Labyrint Starého Města je připravený jako koncept a admin ho musí nejdřív spustit online.
+
+## Nejlepší formát pro dodání obsahu her
+
+Nejlépe pošli každou hru jako tabulku nebo JSON/YAML, kde jeden řádek/objekt odpovídá jednomu slidu:
+
+```yaml
+game:
+  title: "Kodex Ztraceného světa"
+  activation_codes: ["KODX-2026-PRAH"]
+  design:
+    font: "Cinzel"
+    color: "#86d6ff"
+slides:
+  - number: 1
+    admin_title: "Prolog"
+    type: 2
+    content_blocks:
+      - type: text
+        value: "Text pro hráče, může obsahovat **tučné** a *kurzívu*."
+      - type: image
+        file: "prolog.jpg"
+      - type: audio
+        file: "ambient.mp3"
+    button_text: "Pokračovat"
+    hints: []
+    points: 0
+    hint_penalty: 0
+    wrong_penalty: 0
+    correct_answers: []
+    options: []
+    inventory_add: []
+    branching: []
+```
+
+U obrázků a zvuků stačí připojit soubory zvlášť a ve slidu uvést jejich názvy. Pokud bude jednodušší tabulka, použij sloupce: `číslo`, `název pro admina`, `typ`, `texty`, `obrázky`, `audio`, `odpovědi`, `možnosti`, `nápovědy`, `body`, `srážka nápověda`, `srážka chyba`, `inventář`, `větvení/cíl`.
 
 ## Kontrola syntaxe
 
 ```bash
 npm run build
 ```
-
-## Když na GitHubu nevidíš žádné soubory
-
-Pokud v GitHub repozitáři nevidíš `index.html`, `src/main.js`, `src/styles.css`, `preview.svg` ani `README.md`, změny pravděpodobně ještě nejsou nahrané na GitHubu nebo se díváš na jinou branch.
-
-Zkontroluj hlavně:
-
-1. Jestli je otevřená správná branch. Tato práce vznikla na aktuální pracovní větvi, ne nutně na `main`.
-2. Jestli byl branch pushnutý na GitHub. Bez `git push` GitHub lokální commity neuvidí.
-3. Jestli byl pull request mergnutý. Dokud PR není sloučený, soubory nemusí být vidět na hlavní větvi repozitáře.
-
-Typický postup je:
-
-```bash
-git status
-git branch --show-current
-git push origin NAZEV_TVE_BRANCH
-```
-
-Po pushnutí otevři na GitHubu příslušnou branch nebo pull request. Teprve tam uvidíš přidané soubory a náhled.
